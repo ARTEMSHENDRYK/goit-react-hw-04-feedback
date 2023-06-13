@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import Section from "./Section/Section";
 import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
 import Statistics from "./Statistics/Statistics";
@@ -6,9 +6,9 @@ import Notification from "./Notification/Notification";
 import css from "./App.module.css";
 
 function App() {
-  const [good, setGood] = React.useState(0);
-  const [neutral, setNeutral] = React.useState(0);
-  const [bad, setBad] = React.useState(0);
+  const [good, setGood] = useState(0);
+  const [neutral, setNeutral] = useState(0);
+  const [bad, setBad] = useState(0);
   
   const handleIncrement = evt => {
     switch (evt.target.name) {
